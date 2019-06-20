@@ -85,6 +85,7 @@
     display: flex;
 }
 .chat__sidebar {
+    height: 100%;
     width: 300px;
     border-right: 1px solid #EDF0F4;
 }
