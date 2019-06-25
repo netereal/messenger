@@ -88,6 +88,7 @@
 .sidebar {
     width: 400px;
     border-right: 1px solid #EDF0F4;
+    overflow-y: scroll;
 }
 .sidebar__user-active {
     background-color: #FFFFFF;
@@ -202,7 +203,7 @@
 .message {
     min-height: 100px;
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     min-width: 300px;
 }
 
@@ -252,11 +253,15 @@
     height: 36px;
 }
 .message__text {
-    padding: 15px 35px 15px 15px;
+    padding: 20px 40px 20px 20px;
     color: #222428;
-    font-size: 14px;
-    line-height: 20px;
-    width: 222px;
+    width: 330px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+.message__content{
+    min-width: 400px;
 }
 .message__time {
     position: absolute;
@@ -268,14 +273,24 @@
 }
 
 /*----scroll---*/
-.message-field::-webkit-scrollbar {
+.message-field::-webkit-scrollbar{
     width: 8px;
-    background: #f5f6f7;
+    background: #fdfeff;
     mix-blend-mode: normal;
     border-radius: 4px;
     margin: 6px;
 }
 .message-field::-webkit-scrollbar-thumb {
-    background-color: #dee4f1;
+    background-color: #e7edfa;
     border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar{
+    width: 4px;
+    background: #fdfeff;
+    mix-blend-mode: normal;
+    border-radius: 2px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #edf2ff;
+    border-radius: 2px;
 }
