@@ -1,0 +1,295 @@
+.main-container
+  display: flex
+  width: 100vw
+  height: 100vh
+  margin: 0 auto
+  box-shadow: 0 0 10px #c0c0c0
+
+.content
+  width: calc(100% - 100px)
+  height: 100%
+  float: left
+  background: #f7f9fc
+
+/*--navbar--
+
+.navbar
+  max-width: 100px
+  padding: 18px 22px 18px 23px
+  float: left
+  background: #01134e
+  box-sizing: border-box
+
+.navbar__menu
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.navbar__logo
+  margin-bottom: 65px
+
+.navbar__link
+  position: relative
+  margin-bottom: 50px
+  text-decoration: none
+
+.navbar__link-index
+  display: block
+  width: 20px
+  height: 20px
+  margin: auto
+  transform: translate(10px, 10px)
+  border-radius: 50%
+  background: #2a74db
+  color: #fff
+  font-family: Roboto, sans-serif
+  font-size: 12px
+  font-style: normal
+  font-weight: bold
+  line-height: 20px
+  text-align: center
+  text-decoration: none
+
+/*--сontent-header--
+
+.header
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 25px 40px 16px
+  border-bottom: 2px solid #dae4f2
+  box-sizing: border-box
+
+.header__breadcrumps
+  display: flex
+
+.breadcrumbs .separator
+  transform: translateY(-15%)
+
+.header__item
+  margin-right: 14px
+  color: #252f48
+  font-family: 'Roboto', sans-serif
+  font-size: 13px
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+
+/*--chat--
+
+.chat
+  display: flex
+  height: 70vh
+  margin: 42px 46px 0
+  border: 1px solid #edf0f4
+  border-radius: 4px
+  background-color: #f7f9fc
+  box-shadow: 0 5px 5px rgba(190, 200, 212, 0.1), 0 -5px 5px rgba(224, 224, 224, 0.1)
+
+/*--sidebar-chat--
+
+.sidebar
+  width: 400px
+  border-right: 1px solid #edf0f4
+  overflow-y: scroll
+
+.sidebar__user-active
+  background-color: #fff
+  box-shadow: 0 0 30px rgba(153, 163, 174, 0.06)
+
+.sidebar__user
+  display: flex
+  padding: 22px 10px 22px 21px
+
+.sidebar__user__img
+  margin-right: 14px
+
+.sidebar__user__name
+  margin-bottom: 5px
+  color: #01134e
+  font-family: "Exo 2", sans-serif
+  font-size: 16px
+  font-style: normal
+  font-weight: 500
+  line-height: 19px
+
+.sidebar__user__message
+  color: #252f48
+  font-family: "Roboto", sans-serif
+  font-size: 14px
+  font-style: normal
+  font-weight: normal
+  line-height: 18px
+  opacity: 0.43
+  mix-blend-mode: normal
+
+.sidebar__user__time
+  color: #9ba0ad
+  font-family: Roboto,sans-serif
+  font-size: 12px
+  font-style: normal
+  font-weight: normal
+  line-height: 14px
+
+.index
+  position: absolute
+  width: 6px
+  height: 6px
+  transform: translate(10px)
+  border-radius: 50%
+  background-color: #0ad69c
+
+/*---chating---
+
+.chating
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 100%
+  height: 100%
+  background: #fff
+
+/*---search---
+
+.search
+  display: flex
+  justify-content: flex-start
+  border-bottom: 1px solid #f5f6f9
+
+.search__icon
+  margin-right: 22px
+  margin-left: 18px
+  padding: 25px 0
+  cursor: pointer
+
+.search__input
+  width: 100%
+  border: 0
+  outline: none
+  font-family: "Roboto", sans-serif
+  font-size: 14px
+  &::placeholder
+    color: rgba(37, 47, 72, 0.2)
+
+/*---send-field---
+
+.send-field
+  display: flex
+  justify-content: flex-start
+  border-top: 1px solid #f5f6f9
+  box-shadow: 0 0 20px rgba(153, 163, 174, 0.14654)
+
+.send-field__input
+  width: 100%
+  border: 0
+  outline: none
+  font-family: "Roboto", sans-serif
+  font-size: 14px
+
+.send-field__image
+  margin-right: 22px
+  margin-left: 18px
+  padding: 30px 0
+  cursor: pointer
+
+.send-field__input::placeholder
+  padding-left: 31px
+  color: rgba(37, 47, 72, 0.2)
+
+.send-field__button
+  margin: 11px
+  padding: 0 20px
+  border: 0
+  border-radius: 7px
+  outline: none
+  background: #fff
+  box-shadow: 0 0 15px rgba(153, 163, 174, 0.25926)
+
+/*---message-field---
+
+.message-field
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  overflow-y: scroll
+
+.message
+  min-width: 300px
+  min-height: 100px
+  font-family: "Roboto", sans-serif
+  font-size: 17px
+
+.message__friend, .message__my
+  margin-top: 11px
+  margin-bottom: 11px
+
+.message__friend
+  display: flex
+  align-items: flex-end
+
+.message__my
+  display: flex
+  justify-content: flex-end
+  margin-right: 46px
+
+.message__content
+  display: flex
+  position: relative
+  width: auto
+  border-radius: 5px
+  background-color: #f7f9fc
+
+.message__friend .message__content::before
+  position: absolute
+  bottom: 0
+  left: -10px
+  border: 7px solid transparent
+  border-right: 7px solid #f7f9fc
+  border-bottom: 7px solid #f7f9fc
+  content: ""
+
+.message__my .message__content::after
+  position: absolute
+  right: -10px
+  bottom: 0
+  border: 7px solid transparent
+  border-bottom: 7px solid #f7f9fc
+  border-left: 7px solid #f7f9fc
+  content: ""
+
+.message__photo
+  width: 36px
+  height: 36px
+  margin-right: 11px
+  margin-left: 21px
+
+.message__text
+  width: 330px
+  padding: 20px 40px 20px 20px
+  color: #222428
+  font-family: "Roboto", sans-serif
+  font-size: 17px
+  line-height: 1.5
+
+.message__content
+  min-width: 400px
+
+.message__time
+  position: absolute
+  right: 3%
+  bottom: 0%
+  padding-bottom: 15px
+  color: #9ba0ad
+  font-size: 12px
+
+/*----scroll---
+
+.sidebar::-webkit-scrollbar, .message-field::-webkit-scrollbar
+  width: 4px
+  border-radius: 2px
+  background: #fdfeff
+  mix-blend-mode: normal
+
+.sidebar::-webkit-scrollbar-thumb, .message-field::-webkit-scrollbar-thumb
+  border-radius: 2px
+  background-color: #edf2ff
