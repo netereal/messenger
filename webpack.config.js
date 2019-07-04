@@ -13,16 +13,46 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.sass/,
+                test: /\.sass$/,
                 use: [
                     { loader: 'style-loader' },
                     { loader: 'css-loader' },
                     { loader: 'sass-loader' }
                 ]
+            },
+            {
+                test: /\.pug$/,
+                use: [
+                    {
+                        loader: 'pug-loader',
+                        options: {
+                            pretty: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.njk$/,
+                use: [
+                    'html-loader',
+                    {
+                        loader: 'nunjucks-html-loader',
+                        options: {
+                            searchPaths: ['./src/templates'],
+                        }
+                    }
+                ]
             }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin('./src/index.html')
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/templates/index.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sample.html',
+            template: './src/templates/sample.njk'
+        })
     ]
 };
