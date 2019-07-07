@@ -51,14 +51,12 @@
                     </a>
                 </li>
                 <li class="navbar__link">
-                    <a href="#">
                         <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.00018 9.59594C11.229 9.59594 13.036 7.4478 13.036 4.79795C13.036 1.12334 11.2291 0 9.00018 0C6.77119 0 4.96436 1.12334 4.96436 4.79795C4.9644 7.4478 6.77124 9.59594 9.00018 9.59594Z"
                                   fill="#8089A6"/>
                             <path d="M17.912 16.6582L15.8758 11.9994C15.7827 11.7862 15.6191 11.6094 15.4155 11.5017L12.2555 9.83093C12.1858 9.79415 12.1015 9.8013 12.0388 9.84947C11.1451 10.5361 10.0942 10.899 9.00004 10.899C7.90565 10.899 6.8549 10.5361 5.96116 9.84947C5.89834 9.8013 5.81396 9.79415 5.74428 9.83093L2.58455 11.5017C2.38083 11.6094 2.2174 11.7861 2.12418 11.9994L0.088054 16.6582C-0.0523243 16.9794 -0.0235536 17.3469 0.16504 17.6415C0.353546 17.936 0.672575 18.1118 1.01848 18.1118H16.9815C17.3274 18.1118 17.6465 17.9359 17.835 17.6414C18.0235 17.3469 18.0524 16.9793 17.912 16.6582Z"
                                   fill="#8089A6"/>
                         </svg>
-                    </a>
                 </li>
                 <li class="navbar__link">
                     <a href="#">
@@ -94,7 +92,7 @@
                     </a>
                 </li>
 
-                <li class="navbar__link">
+                <li class="navbar__link navbar__link--active">
                     <a href="#">
                         <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.9196 5.31729C2.1726 5.49863 2.93522 6.03719 4.20752 6.9327C5.47985 7.82821 6.45455 8.51773 7.13164 9.0013C7.20603 9.05431 7.36408 9.16953 7.60585 9.34713C7.84767 9.52485 8.0486 9.66847 8.20848 9.77801C8.36848 9.88752 8.5619 10.0104 8.78894 10.1464C9.0159 10.2822 9.22985 10.3844 9.43074 10.4521C9.63167 10.5203 9.81766 10.5541 9.98876 10.5541H9.99998H10.0112C10.1823 10.5541 10.3684 10.5203 10.5693 10.4521C10.7702 10.3844 10.9843 10.2821 11.2111 10.1464C11.4379 10.0102 11.6314 9.88748 11.7914 9.77801C11.9514 9.66847 12.1521 9.52485 12.394 9.34713C12.6358 9.16937 12.794 9.05431 12.8684 9.0013C13.5528 8.51773 15.294 7.28961 18.0915 5.31705C18.6347 4.93179 19.0884 4.46693 19.453 3.92277C19.8178 3.37884 20 2.80824 20 2.21127C20 1.71242 19.8232 1.28539 19.4697 0.930225C19.1163 0.574983 18.6977 0.397461 18.2142 0.397461H1.78564C1.21276 0.397461 0.77189 0.593922 0.463111 0.986845C0.15437 1.37985 0 1.87108 0 2.4605C0 2.93661 0.20468 3.45254 0.613846 4.00797C1.02297 4.56345 1.45837 4.99993 1.9196 5.31729Z"
@@ -111,18 +109,19 @@
         <header class="header">
             <ul class="header__breadcrumps">
                 <li><a href="#" class="header__item">Home</a></li>
+                <img class="separator" src="assets/shevron-right.svg" alt="shevron">
                 <li><a href="#" class="header__item">Network</a></li>
             </ul>
         </header>
         <div class="chat">
             <div class="sidebar">
                 <div class="sidebar__user">
-                    <div class="sidebar__user__img">
+                    <div class="sidebar__user__img sidebar__user--online">
                         <img src="assets/Oval%202(1).png" alt="user">
                     </div>
                     <div>
-                        <p class="sidebar__user__name">
-                            Miranda Hops <sup><span class="index"></span></sup>
+                        <span class="sidebar__user__name">
+                            Miranda Hops
                             <span class="request">
                                         <svg width="8" height="10" viewBox="0 0 8 10" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +131,7 @@
       fill="#9BA0AD"/>
 </svg>
                                     </span>
-                        </p>
+                        </span>
                         <p class="sidebar__user__message">
                             Excepteur sint occaecatar…
                         </p>
@@ -142,13 +141,13 @@
                     </div>
                 </div>
                 <div class="sidebar__user">
-                    <div class="sidebar__user__img">
+                    <div class="sidebar__user__img sidebar__user--online">
                         <img src="assets/Oval%202(2).png" alt="user">
                     </div>
                     <div class="chat__user__description">
-                        <p class="sidebar__user__name">
+                        <span class="sidebar__user__name">
                             Barry Callebaut
-                        </p>
+                        </span>
                         <p class="sidebar__user__message">
                             Nemo enim ipsam volupta…
                         </p>
@@ -162,9 +161,9 @@
                         <img src="assets/Oval%202.png" alt="user">
                     </div>
                     <div>
-                        <p class="sidebar__user__name">
-                            Stacey Dosh <sup><span class="index"></span></sup>
-                        </p>
+                        <span class="sidebar__user__name">
+                            Stacey Dosh
+                        </span>
                         <p class="sidebar__user__message">
                             Ut enim ad minima veniam…
                         </p>
@@ -178,9 +177,9 @@
                         <img src="assets/Oval%202(3).png" alt="user">
                     </div>
                     <div>
-                        <p class="sidebar__user__name">
+                        <span class="sidebar__user__name">
                             Michael Kors
-                        </p>
+                        </span>
                         <p class="sidebar__user__message">
                             To take a trivial example…
                         </p>
@@ -194,9 +193,9 @@
                         <img src="assets/Oval%202(4).png" alt="user">
                     </div>
                     <div>
-                        <p class="sidebar__user__name">
-                            Johny Cash <sup><span class="index"></span></sup>
-                        </p>
+                        <span class="sidebar__user__name">
+                            Johny Cash
+                        </span>
                         <p class="sidebar__user__message">
                             Great explorer of the truth…
                         </p>
@@ -206,13 +205,13 @@
                     </div>
                 </div>
                 <div class="sidebar__user">
-                    <div class="sidebar__user__img">
+                    <div class="sidebar__user__img sidebar__user--online">
                         <img src="assets/Oval%202(5).png" alt="user">
                     </div>
                     <div>
-                        <p class="sidebar__user__name">
+                        <span class="sidebar__user__name">
                             Stacey Dosh
-                        </p>
+                        </span>
                         <p class="sidebar__user__message">
                             Ut enim ad minima veniam…
                         </p>
