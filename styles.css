@@ -136,6 +136,16 @@
 }
 .sidebar__user__img {
     margin-right: 14px;
+    position: relative;
+}
+.sidebar__user--online::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #0AD69C;
+    border-radius: 50%;
+    transform: translate(5px);
+    position: absolute;
 }
 .sidebar__user__img img{
     width: 50px;
@@ -168,15 +178,6 @@
     font-size: 12px;
     line-height: 14px;
     color: #9BA0AD;
-}
-.sidebar__user--online::before{
-    content: "";
-    width: 8px;
-    height: 8px;
-    background-color: #0AD69C;
-    border-radius: 50%;
-    transform: translate(5px);
-    position: absolute;
 }
 /*---chating---*/
 .chating{
@@ -346,17 +347,3 @@
 }
 
 /*------RESPONSIVE-----*/
-/* phone*/
-@media(max-width: 768px){
-    .chat{
-        box-shadow: none;
-        margin: 0;
-    }
-    .navbar{
-        display: none !important;
-    }
-    .sidebar{
-        width: 120px;
-    }
-
-}
