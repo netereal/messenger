@@ -1,3 +1,5 @@
+@import "color-palette"
+
 .main-container
   display: flex
   width: 100vw
@@ -7,14 +9,14 @@
 
 .content
   width: calc(100% - 80px)
-  background: #f7f9fc
+  background: $light-accent-color
   float: left
   height: 100%
 
 /*--navbar--
 
 .navbar
-  background: #01134E
+  background: $dark-bg-color
   max-width: 100px
   width: 80px
   float: left
@@ -51,12 +53,12 @@
   svg path
     transition: .3s ease
   &:hover svg path
-    fill: #0ad69c !important
-    color: #0ad69c !important
+    fill: $first-accent-color !important
+    color: $first-accent-color !important
     fill-opacity: 1 !important
 
 .navbar__link--active
-  border-left: 4px solid #0ad69c
+  border-left: 4px solid $first-accent-color
   box-sizing: border-box
 
 .navbar__link-index
@@ -105,7 +107,7 @@
 
 .chat
   display: flex
-  background-color: #F7F9FC
+  background-color: $light-accent-color
   box-shadow: 0 5px 5px rgba(190, 200, 212, 0.1), 0 -5px 5px rgba(224, 224, 224, 0.1)
   border-radius: 4px
   margin: 42px 46px 0
@@ -115,7 +117,7 @@
 /*--sidebar-chat--
 
 .sidebar
-  width: 400px
+  width: 350px
   border-right: 1px solid #EDF0F4
   overflow-y: scroll
 
@@ -127,16 +129,24 @@
   display: flex
   padding: 22px 10px 22px 21px
   transition: .3s ease
-  min-width: 230px
-  max-width: 300px
   &:hover
     background: #f0f2f5
 
 .sidebar__user__img
   margin-right: 14px
+  position: relative
   img
     width: 50px
     height: 50px
+
+.sidebar__user--online::before
+  content: ""
+  width: 8px
+  height: 8px
+  background-color: $first-accent-color
+  border-radius: 50%
+  transform: translate(5px)
+  position: absolute
 
 .sidebar__user__name
   font-family: "Exo 2", sans-serif
@@ -144,7 +154,7 @@
   font-weight: 500
   font-size: 16px
   line-height: 19px
-  color: #01134E
+  color: $dark-bg-color
   margin-bottom: 5px
 
 .sidebar__user__message
@@ -164,16 +174,7 @@
   font-weight: normal
   font-size: 12px
   line-height: 14px
-  color: #9BA0AD
-
-.sidebar__user--online::before
-  content: ""
-  width: 8px
-  height: 8px
-  background-color: #0AD69C
-  border-radius: 50%
-  transform: translate(5px)
-  position: absolute
+  color: $text-color
 
 /*---chating---
 
@@ -242,7 +243,7 @@
   outline: none
   transition: .3s ease
   &:hover
-    background: #01134e
+    background: $dark-bg-color
 
 /*---message-field---
 
@@ -277,7 +278,7 @@
   display: flex
   position: relative
   width: auto
-  background-color: #f7f9fc
+  background-color: $light-accent-color
   border-radius: 5px
 
 .message__friend .message__content::before
@@ -286,8 +287,8 @@
   left: -10px
   bottom: 0px
   border: 7px solid transparent
-  border-right: 7px solid #f7f9fc
-  border-bottom: 7px solid #f7f9fc
+  border-right: 7px solid $light-accent-color
+  border-bottom: 7px solid $light-accent-color
 
 .message__my .message__content::after
   content: ""
@@ -295,8 +296,8 @@
   right: -10px
   bottom: 0px
   border: 7px solid transparent
-  border-bottom: 7px solid #f7f9fc
-  border-left: 7px solid #f7f9fc
+  border-bottom: 7px solid $light-accent-color
+  border-left: 7px solid $light-accent-color
 
 .message__photo
   margin-left: 21px
@@ -312,6 +313,7 @@
   font-family: "Roboto", sans-serif
   font-size: 15px
   line-height: 1.5
+  margin-right: 30px
 
 .message__content
   min-width: 400px
@@ -320,9 +322,9 @@
 .message__time
   position: absolute
   right: 3%
-  color: #9ba0ad
+  color: $text-color
   font-size: 12px
-  padding-bottom: 15px
+  margin: 15px 0 15px 20px
   bottom: 0%
 
 /*----scroll---
@@ -338,12 +340,4 @@
   border-radius: 2px
 
 /*------RESPONSIVE-----
-/* phone
-@media (max-width: 768px)
-  .chat
-    box-shadow: none
-    margin: 0
-  .navbar
-    display: none !important
-  .sidebar
-    width: 120px
+/* to be continued
