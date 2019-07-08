@@ -1,88 +1,22 @@
+include mixins
+
+-const users = [{"name":"Miranda Hops","status":"Excepteur sint occaecatar…","time":"9:32","img":'assets/Oval%202(1).png',"mute":true},{"name":"Barry Callebaut","status":"Nemo enim ipsam volupta…","time":"22:01","img":'assets/Oval%202(2).png'},{"name":"Stacey Dosh","status":"Ut enim ad minima veniam…","time":"19:15","img":'assets/Oval%202.png',"active":true},{"name":"Michael Kors","status":"To take a trivial example…","time":"13:49","img":'assets/Oval%202(3).png'},{"name":"Johny Cash","status":"Great explorer of the truth…","time":"10:25","img":'assets/Oval%202(4).png'},{"name":"Stacey Dosh","status":"Ut enim ad minima veniam…","time":"9:32","img":'assets/Oval%202(5).png'}]
+-const messageFriend = [{"img":"assets/friend.png","text":"On the other hand, we denounce with righteous indignation!","time":"01:14"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"}]
+-const messageMy = [{"text":"Which is the same as saying?","time":"01:38"},{"text":"To take a trivial example, which of us ever undertakes)","time":"03:25"},{"text":"To take a trivial example, which of us ever undertakes)","time":"03:25"}]
 .chat
     .sidebar
-        .sidebar__user
-            .sidebar__user__img.sidebar__user--online
-                img(src='assets/Oval%202(1).png', alt='user')
-            div
-                span.sidebar__user__name
-                    | Miranda Hops
-                    span.request
-                        svg(width='8', height='10', viewBox='0 0 8 10', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M1.98809 6.27886C2.00229 6.27886 2.03069 6.27886 2.03069 6.27886L5.68025 2.37696V0.800897C5.68025 0.54077 5.38203 0.403056 5.19743 0.556072L2.17269 3.15734C2.13009 3.18794 2.05909 3.21854 1.98809 3.21854H0.255611C0.0994042 3.21854 0 3.35626 0 3.52458V5.97283C0 6.14114 0.0852036 6.27886 0.255611 6.27886H1.98809Z', fill='#9BA0AD')
-                            path(d='M7.90954 1.04591C7.79594 0.923498 7.62553 0.923498 7.51193 1.04591L0.156005 8.97212C0.0423995 9.09454 0.0423995 9.27816 0.156005 9.40057C0.212807 9.46177 0.28381 9.49238 0.354813 9.49238C0.425816 9.49238 0.496819 9.46177 0.553622 9.40057L2.85412 6.92171L5.21143 8.92622C5.39603 9.07924 5.69425 8.94152 5.69425 8.68139V3.92261L7.93794 1.48966C8.03735 1.36724 8.00895 1.16832 7.90954 1.04591Z', fill='#9BA0AD')
-                p.sidebar__user__message Excepteur sint occaecatar…
-            .sidebar__user__time 9:32
-        .sidebar__user
-            .sidebar__user__img.sidebar__user--online
-                img(src='assets/Oval%202(2).png', alt='user')
-            .chat__user__description
-                span.sidebar__user__name Barry Callebaut
-                p.sidebar__user__message Nemo enim ipsam volupta…
-            .sidebar__user__time 22:01
-        .sidebar__user.sidebar__user-active
-            .sidebar__user__img
-                img(src='assets/Oval%202.png', alt='user')
-            div
-                span.sidebar__user__name Stacey Dosh
-                p.sidebar__user__message Ut enim ad minima veniam…
-            .sidebar__user__time 19:15
-        .sidebar__user
-            .sidebar__user__img
-                img(src='assets/Oval%202(3).png', alt='user')
-            div
-                span.sidebar__user__name Michael Kors
-                p.sidebar__user__message To take a trivial example…
-            .sidebar__user__time 13:49
-        .sidebar__user
-            .sidebar__user__img
-                img(src='assets/Oval%202(4).png', alt='user')
-            div
-                span.sidebar__user__name Johny Cash
-                p.sidebar__user__message Great explorer of the truth…
-            .sidebar__user__time 10:25
-        .sidebar__user
-            .sidebar__user__img.sidebar__user--online
-                img(src='assets/Oval%202(5).png', alt='user')
-            div
-                span.sidebar__user__name Stacey Dosh
-                p.sidebar__user__message Ut enim ad minima veniam…
-            .sidebar__user__time 8:53
+        each user in users
+            +friend(user)
     .chating
         .search
             img.search__icon(src='assets/search.svg')
             input.search__input(type='text', placeholder='Search message...')
         .message-field
             .message
-                .message__friend
-                    img.message__photo(src='assets/friend.png', alt='')
-                    .message__content
-                        span.message__text On the other hand, we denounce with righteous indignation!
-                        span.message__time 01:14
-                .message__my
-                    .message__content
-                        span.message__text Which is the same as saying?
-                        span.message__time 01:38
-                .message__friend
-                    img.message__photo(src='assets/friend.png', alt='')
-                    .message__content
-                        span.message__text
-                            | But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures
-                        span.message__time 01:14
-                .message__my
-                    .message__content
-                        span.message__text To take a trivial example, which of us ever undertakes)
-                        span.message__time 01:38
-                .message__my
-                    .message__content
-                        span.message__text
-                            | Which is the same as saying? On the other hand, we denounce with righteous indignation!
-                        span.message__time 01:38
-                .message__friend
-                    img.message__photo(src='assets/friend.png', alt='')
-                    .message__content
-                        span.message__text
-                            | A design is a construction or activity specification or plan, or the result of that plan in the form of a prototype, finished product, or process. "To design" as a verb expresses the process of developing such a design. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork and some engineering, coding, and graphic design) is also considered[by whom?] to be a design activity. The same word is also used for the broad discipline of design creation, which spans engineering and applied art.[citation needed] Major examples of design include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.
-                        span.message__time 01:14
+                -var n = 0;
+                while n < messageMy.length
+                    +messageFriend(messageFriend[n])
+                    +messageMy(messageMy[n++])
         .send-field
             input.send-field__input(type='text', placeholder='Search message...')
             a.send-field__image
