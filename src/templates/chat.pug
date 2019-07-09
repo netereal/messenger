@@ -3,6 +3,8 @@ include mixins
 -const users = [{"name":"Miranda Hops","status":"Excepteur sint occaecatar…","time":"9:32","img":'assets/Oval%202(1).png',"mute":true},{"name":"Barry Callebaut","status":"Nemo enim ipsam volupta…","time":"22:01","img":'assets/Oval%202(2).png'},{"name":"Stacey Dosh","status":"Ut enim ad minima veniam…","time":"19:15","img":'assets/Oval%202.png',"active":true},{"name":"Michael Kors","status":"To take a trivial example…","time":"13:49","img":'assets/Oval%202(3).png'},{"name":"Johny Cash","status":"Great explorer of the truth…","time":"10:25","img":'assets/Oval%202(4).png'},{"name":"Stacey Dosh","status":"Ut enim ad minima veniam…","time":"9:32","img":'assets/Oval%202(5).png'}]
 -const messageFriend = [{"img":"assets/friend.png","text":"On the other hand, we denounce with righteous indignation!","time":"01:14"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"}]
 -const messageMy = [{"text":"Which is the same as saying?","time":"01:38"},{"text":"To take a trivial example, which of us ever undertakes)","time":"03:25"},{"text":"To take a trivial example, which of us ever undertakes)","time":"03:25"}]
+-const texts = [{"img":"assets/friend.png","text":"On the other hand, we denounce with righteous indignation!","time":"01:14"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"},{"img":"assets/friend.png","text":"But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures","time":"02:05"},{"isMe": "true", "text":"Which is the same as saying?","time":"01:38"},{"isMe": "true", "text":"To take a trivial example, which of us ever undertakes)","time":"03:25"},{"isMe": "true", "text":"To take a trivial example, which of us ever undertakes)","time":"03:25"}]
+
 .chat
     .sidebar
         each user in users
@@ -13,10 +15,8 @@ include mixins
             input.search__input(type='text', placeholder='Search message...')
         .message-field
             .message
-                -var n = 0;
-                while n < messageMy.length
-                    +messageFriend(messageFriend[n])
-                    +messageMy(messageMy[n++])
+                each text in texts
+                    +message(text)
         .send-field
             input.send-field__input(type='text', placeholder='Search message...')
             a.send-field__image

@@ -24,15 +24,15 @@ mixin friend (user)
                 p.sidebar__user__message= user.status
             .sidebar__user__time= user.time
 
-mixin messageFriend (user)
-    .message__friend
-        img.message__photo(src=user.img alt='')
-        .message__content
-            span.message__text= user.text
-            span.message__time= user.time
-
-mixin messageMy (user)
-    .message__my
-        .message__content
-            span.message__text= user.text
-            span.message__time= user.time
+mixin message (user)
+    if !user.isMe
+        .message__friend
+            img.message__photo(src=user.img alt='')
+            .message__content
+                span.message__text= user.text
+                span.message__time= user.time
+    else
+        .message__my
+            .message__content
+                span.message__text= user.text
+                span.message__time= user.time
