@@ -3,10 +3,11 @@ html(lang='en')
     head
         meta(charset='UTF-8')
         title
-            | Messenger | Chats
+            | Messenger | My Profile
     body
         .main-container
             include includes/navbar
             .content
                 include includes/header
-                include includes/chat
+                main
+                    block content

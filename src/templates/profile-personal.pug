@@ -1,0 +1,46 @@
+extends base
+block content
+    section.selectmenu
+        article.personal-information.active
+            a(href="profile-personal.html") PERSONAL INFORMATION
+        article.personal-information
+            a(href="profile-account-settings.html") ACCOUNT INFORMATION
+    section.personal-info
+        - const user = {"firstName" : "Faruh", "lastName": "Bernandez", "title": "Mr", "mobilePhone": "+65" }
+        article.photo
+            img(src="./assets/Faruh.jpg", alt="" class="profile-photo")
+            .change
+                img(src="./assets/Pen.svg", alt="")
+                a(href="#") Change photo
+        article.personal-infobox-left
+            .item
+                p.title First Name
+                form(action="")
+                    input(type="text" placeholder=user.firstName class="firstLast")
+            .item
+                p.title Title
+                .title-choose
+                    p= user.title
+                    img(src="./assets/Chevron-down.svg", alt="" class="chevron-down")
+            .item
+                p.title Country
+                .title-choose
+                    img(src="./assets/Location.svg", alt="" class="location")
+                    img(src="./assets/Chevron-down.svg", alt="" class="chevron-down")
+
+        article.personal-infobox-right
+            .item
+                p.title Last Name
+                form(action="")
+                    input(type="text" placeholder=user.lastName class="firstLast")
+            .item
+                p.title Mobile Phone
+                    .title-choose
+                        .country
+                            img(src="./assets/Flag.svg", alt="")
+                            img(src="./images/Chevron-down.svg", alt="")
+                        input(type="text" placeholder=user.mobilePhone)
+            .item
+                p.title Company
+                form(action="")
+                    input(type="text" class="firstLast")

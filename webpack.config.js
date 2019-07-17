@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: ''
     },
     devServer: {
         contentBase: "./dist"
@@ -53,9 +54,14 @@ module.exports = {
             template: './src/templates/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'sample.html',
-            template: './src/templates/sample.njk'
+            filename: 'profile-account-settings.html',
+            template: './src/templates/profile-account-settings.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'profile-personal.html',
+            template: './src/templates/profile-personal.pug'
+        }),
+        new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
                 from: './assets',
