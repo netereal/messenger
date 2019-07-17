@@ -1,0 +1,23 @@
+extends base
+block content
+    section.selectmenu
+        article.personal-information
+            a(href="profile-personal.html") PERSONAL INFORMATION
+        article.personal-information.active
+            a(href="profile-account-settings.html") ACCOUNT INFORMATION
+    section.account-info
+        - const user = {"username": "sarahbarnes", "email": "sarahbbb@gmail.com"}
+        article.account-infobox-left
+            .item
+                p.title username
+                form(action="")
+                    input(type="text" placeholder=user.username class="firstLast")
+        article.account-infobox-right
+            .item
+                p.title email
+                form(action="")
+                    input(type="text" placeholder=user.email class="firstLast")
+            .change-password
+                .passwd-wrap
+                    a(href="") change password
+                    img(src="assets/shevron-right.svg", alt="")
