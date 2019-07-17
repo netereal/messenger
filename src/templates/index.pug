@@ -1,3 +1,4 @@
+include includes/navbar
 doctype html
 html(lang='en')
     head
@@ -6,7 +7,8 @@ html(lang='en')
             | Messenger | Chats
     body
         .main-container
-            include includes/navbar
+            - const page = {"isMainPage": true}
+            +navbar(page)
             .content
                 include includes/header
                 include includes/chat
