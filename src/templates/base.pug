@@ -1,3 +1,4 @@
+include includes/navbar
 doctype html
 html(lang='en')
     head
@@ -6,7 +7,8 @@ html(lang='en')
             | Messenger | My Profile
     body
         .main-container
-            include includes/navbar
+            - const page = {"isProfilePage": true}
+            +navbar(page)
             .content
                 include includes/header
                 main
