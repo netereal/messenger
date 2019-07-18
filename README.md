@@ -10,6 +10,10 @@ Is being developed...
 
 [account](https://netereal.github.io/messenger/profile-account-settings.html)
 
+[sign-in](https://netereal.github.io/messenger/sign-in.html)
+
+[sign-in-success](https://netereal.github.io/messenger/sign-in-success.html)
+
 ## Figma sketch
 
 ![template.png](template.png)
