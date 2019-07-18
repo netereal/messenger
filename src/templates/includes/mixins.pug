@@ -36,3 +36,11 @@ mixin message (user)
             .message__content
                 span.message__text= user.text
                 span.message__time= user.time
+
+mixin cta(question, action, link)
+    .question-wrap
+        p.question= question
+        a(href=link).action= action
+
+mixin input(text)
+    input(type="text" class="input_main2" placeholder= text)

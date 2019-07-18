@@ -1,0 +1,22 @@
+include includes/mixins
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title
+            | Messenger | Sign In
+        link(rel="stylesheet", href="./../styles/reset.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap")
+    body.body2
+        header.header2
+            img(src="./assets/logo2.svg", alt="")
+            a(href='#')
+                +cta('Do you have an account?', 'Sign up','#')
+        main.main2
+            p.title_main2= 'Sign in'
+            +input('Email')
+            +input('Password')
+            p.forgot Forgot password?
+            .button_main2-wrap
+                button.button_main2= 'Sign in'

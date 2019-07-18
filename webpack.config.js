@@ -61,6 +61,14 @@ module.exports = {
             filename: 'profile-personal.html',
             template: './src/templates/profile-personal.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'sign-in.html',
+            template: './src/templates/sign-in.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sign-in-success.html',
+            template: './src/templates/sign-in-success.pug'
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {

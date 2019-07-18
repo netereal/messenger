@@ -1,0 +1,22 @@
+include includes/mixins
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title
+            | Messenger | Check your E-mail
+        link(rel="stylesheet", href="./../styles/reset.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap")
+    body.body3
+        header.header-sign-in
+            img(src="./assets/logo2.svg", alt="")
+            a(href="/profile-personal.html")
+                +cta('Back to', 'Sign in', 'profile-personal.html')
+        main.mainMail
+            .bg
+                img(src="./assets/MailCheck.svg", alt="")
+            img(src="./assets/Letter.svg", alt="")
+            .mailMessage_wrap
+                p.title_mail= 'You are almost ready to go!'
+                p.mailMessage Please check your email to activate your account
