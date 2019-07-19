@@ -13,12 +13,14 @@ html(lang='en')
                     img(src='./assets/logo2.svg' alt='' srcset='')
             .header1__question
                 p.header1__text Do not have an account?
-                a.header1__link(href='sign-up.html') Sigin Up
+                a.header1__link(href='sign-in.html') Sigin In
         main.main__signin
             .main__wrap
                 form.form(action='' method='get')
-                    h3.form__headline Sigin in
+                    h3.form__headline  Sign Up
+                    .form__user-name
+                        input.form__input(type='text' placeholder='Name')
+                        input.form__input(type='text' placeholder='Last name')
                     input.form__input(type='text' placeholder='E-mail')
-                    input.form__input.password(type='text' placeholder='Password')
-                    a.form__link(href='#')
-                    button.form__button Sigin in
+                    input.form__input(type='text' placeholder='Password')
+                    button.form__button Get started

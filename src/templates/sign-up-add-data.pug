@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title
+            | Messenger | Sign In
+        link(rel="stylesheet", href="./../styles/reset.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap")
+    body.body2
+        header.header1
+            figure.header1__logo
+                a(href='index.html')
+                    img(src='./assets/logo2.svg' alt='' srcset='')
+            .header1__question
+                p.header1__text Do not have an account?
+                a.header1__link(href='sign-up.html') Sigin Up
+        main.main__signin
+            .main__wrap
+                form.form(action='' method='get')
+                    h3.form__headline Complete your account
+                    input#pass.form__input(type='text' placeholder='Create a password')
+                    .bar
+                        .bar__item
+                        .bar__item
+                        .bar__item
+                    input.form__input(type='text' placeholder='Confirm password')
+                    .checkboxs
+                        .checkbox
+                            input#agreefirst.input__checkbox(type='checkbox')
+                            label.form__label.label(for='agreefirst')
+                                | agree to the myFixer.com
+                                a.label__link(href='#') Terms of Service
+                        .checkbox
+                            input#agreesec.input__checkbox(type='checkbox')
+                            label.form__label.label(for='agreesec')
+                                | agree to the myFixer.com
+                                a.label__link(href='#') Privacy Policy
+                    button.form__button Get started

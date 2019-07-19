@@ -6,28 +6,28 @@
 
 @mixin firstLastInput()
   width: 280px
-  line-height: 40px
-  padding: 0px 13px
-  border: 2px solid #F2F2F2
+  padding: 0 13px
+  border: 2px solid #f2f2f2
   border-radius: 4px
-  background-color: #FCFCFC
+  background-color: #fcfcfc
+  line-height: 40px
   &::placeholder
     @include font('Roboto', 14px)
+    color: #000
     font-style: normal
     font-weight: normal
-    line-height: 16px
     letter-spacing: 0.28px
-    color: #000
+    line-height: 16px
 
 @mixin title_mail()
-  width: 100%
   display: flex
-  justify-content: center
   align-items: center
+  justify-content: center
+  width: 100%
   @include font('Exo 2', 50px)
+  color: $selectedMenuBorder
   font-style: normal
   font-weight: 600
+  letter-spacing: 0.4px
   line-height: 60px
   text-align: center
-  letter-spacing: 0.4px
-  color: $selectedMenuBorder

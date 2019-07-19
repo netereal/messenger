@@ -3,23 +3,23 @@
 .main-container
   display: flex
   width: 100vw
-  margin: 0 auto
   height: 100vh
+  margin: 0 auto
   box-shadow: 0 0 10px #c0c0c0
 
 .content
   width: calc(100% - 80px)
-  background: $light-accent-color
-  float: left
   height: 100%
+  float: left
+  background: $light-accent-color
 
 /*--navbar--
 
 .navbar
-  background: $dark-bg-color
-  max-width: 100px
   width: 80px
+  max-width: 100px
   float: left
+  background: $dark-bg-color
   box-sizing: border-box
 
 .navbar__menu
@@ -35,48 +35,48 @@
   text-align: center
 
 .navbar__link
+  position: relative
+  align-items: center
+  justify-content: center
   width: inherit
-  text-align: center
-  padding-top: 20px
-  padding-bottom: 20px
   margin-top: 10px
   margin-bottom: 10px
-  -webkit-box-align: center
-  vertical-align: baseline
-  align-items: center
-  -webkit-box-pack: center
-  justify-content: center
-  position: relative
+  padding-top: 20px
+  padding-bottom: 20px
   transition: .3s ease
+  text-align: center
+  vertical-align: baseline
+  -webkit-box-align: center
+  -webkit-box-pack: center
   &:hover
     background: rgba(255, 255, 255, 0.1)
   svg path
     transition: .3s ease
   &:hover svg path
-    fill: $first-accent-color !important
     color: $first-accent-color !important
     fill-opacity: 1 !important
+    fill: $first-accent-color !important
 
 .navbar__link--active
   border-left: 4px solid $first-accent-color
   box-sizing: border-box
 
 .navbar__link-index
-  background: #2A74DB
-  border-radius: 50%
+  display: block
   width: 20px
   height: 20px
   margin: auto
-  display: block
-  text-decoration: none
-  text-align: center
+  transform: translate(10px, 10px)
+  border-radius: 50%
+  background: #2a74db
+  color: #fff
   font-family: Roboto, sans-serif
+  font-size: 12px
   font-style: normal
   font-weight: bold
-  font-size: 12px
   line-height: 20px
-  transform: translate(10px, 10px)
-  color: #fff
+  text-align: center
+  text-decoration: none
 
 /*--сontent-header--
 
@@ -85,8 +85,8 @@
   justify-content: space-between
   width: 100%
   padding: 25px 40px 16px
+  border-bottom: 2px solid #dae4f2
   box-sizing: border-box
-  border-bottom: 2px solid #DAE4F2
 
 .header__breadcrumps
   display: flex
@@ -96,33 +96,33 @@
 
 .header__item
   margin-right: 14px
+  color: #252f48
   font-family: 'Roboto', sans-serif
+  font-size: 13px
   font-style: normal
   font-weight: normal
-  font-size: 13px
   text-decoration: none
-  color: #252F48
 
 /*--chat--
 
 .chat
   display: flex
+  height: 80vh
+  margin: 20px 20px 0
+  border: 1px solid #edf0f4
+  border-radius: 4px
   background-color: $light-accent-color
   box-shadow: 0 5px 5px rgba(190, 200, 212, 0.1), 0 -5px 5px rgba(224, 224, 224, 0.1)
-  border-radius: 4px
-  margin: 20px 20px 0
-  height: 80vh
-  border: 1px solid #EDF0F4
 
 /*--sidebar-chat--
 
 .sidebar
   width: 350px
-  border-right: 1px solid #EDF0F4
+  border-right: 1px solid #edf0f4
   overflow-y: scroll
 
 .sidebar__user-active
-  background-color: #FFFFFF !important
+  background-color: #fff !important
   box-shadow: 0 0 30px rgba(153, 163, 174, 0.06)
 
 .sidebar__user
@@ -133,58 +133,58 @@
     background: #f0f2f5
 
 .sidebar__user__img
-  margin-right: 14px
   position: relative
+  margin-right: 14px
   img
     width: 50px
     height: 50px
 
 .sidebar__user--online::before
-  content: ""
+  position: absolute
   width: 8px
   height: 8px
-  background-color: $first-accent-color
-  border-radius: 50%
   transform: translate(5px)
-  position: absolute
+  border-radius: 50%
+  background-color: $first-accent-color
+  content: ""
 
 .sidebar__user__name
+  margin-bottom: 5px
+  color: $dark-bg-color
   font-family: "Exo 2", sans-serif
+  font-size: 16px
   font-style: normal
   font-weight: 500
-  font-size: 16px
   line-height: 19px
-  color: $dark-bg-color
-  margin-bottom: 5px
 
 .sidebar__user__message
+  padding-top: 8px
+  color: #252f48
   font-family: "Roboto", sans-serif
+  font-size: 13px
   font-style: normal
   font-weight: normal
-  font-size: 13px
   line-height: 16px
-  color: #252F48
-  mix-blend-mode: normal
   opacity: 0.5
-  padding-top: 8px
+  mix-blend-mode: normal
 
 .sidebar__user__time
+  color: $text-color
   font-family: Roboto,sans-serif
+  font-size: 12px
   font-style: normal
   font-weight: normal
-  font-size: 12px
   line-height: 14px
-  color: $text-color
 
 /*---chating---
 
 .chating
   display: flex
-  height: 100%
   flex-direction: column
   justify-content: space-between
-  background: #fff
   width: 100%
+  height: 100%
+  background: #fff
 
 /*---search---
 
@@ -196,52 +196,52 @@
 .search__icon
   margin-right: 22px
   margin-left: 18px
+  padding: 25px 0
   cursor: pointer
-  padding: 25px 0px
 
 .search__input
-  border: none
+  width: 100%
+  border: 0
   outline: none
   font-family: "Roboto", sans-serif
   font-size: 14px
-  width: 100%
   &::placeholder
     color: rgba(37, 47, 72, 0.2)
 
 /*---send-field---
 
 .send-field
-  box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.14654)
   display: flex
   justify-content: flex-start
   border-top: 1px solid #f5f6f9
+  box-shadow: 0 0 20px rgba(153, 163, 174, 0.14654)
 
 .send-field__input
-  border: none
+  width: 100%
+  padding-left: 31px
+  border: 0
   outline: none
   font-family: "Roboto", sans-serif
   font-size: 14px
-  width: 100%
-  padding-left: 31px
 
 .send-field__image
   margin-right: 22px
   margin-left: 18px
+  padding: 30px 0
   cursor: pointer
-  padding: 30px 0px
 
 .send-field__input::placeholder
   color: rgba(37, 47, 72, 0.2)
 
 .send-field__button
-  background: #FFFFFF
-  box-shadow: 0px 0px 15px rgba(153, 163, 174, 0.25926)
-  border-radius: 7px
-  padding: 0px 20px
   margin: 11px
-  border: none
-  outline: none
+  padding: 0 20px
   transition: .3s ease
+  border: 0
+  border-radius: 7px
+  outline: none
+  background: #fff
+  box-shadow: 0 0 15px rgba(153, 163, 174, 0.25926)
   &:hover
     background: $dark-bg-color
 
@@ -254,14 +254,14 @@
   overflow-y: scroll
 
 .message
+  min-width: 300px
   min-height: 100px
   font-family: "Roboto", sans-serif
   font-size: 17px
-  min-width: 300px
 
 .message__friend, .message__my
-  margin-bottom: 11px
   margin-top: 11px
+  margin-bottom: 11px
 
 .message__friend
   display: flex
@@ -278,42 +278,42 @@
   display: flex
   position: relative
   width: auto
-  background-color: $light-accent-color
   border-radius: 5px
+  background-color: $light-accent-color
 
 .message__friend .message__content::before
-  content: ""
   position: absolute
+  bottom: 0
   left: -10px
-  bottom: 0px
   border: 7px solid transparent
   border-right: 7px solid $light-accent-color
   border-bottom: 7px solid $light-accent-color
+  content: ""
 
 .message__my .message__content::after
-  content: ""
   position: absolute
   right: -10px
-  bottom: 0px
+  bottom: 0
   border: 7px solid transparent
   border-bottom: 7px solid $light-accent-color
   border-left: 7px solid $light-accent-color
+  content: ""
 
 .message__photo
-  margin-left: 21px
-  margin-right: 11px
   width: 36px
   height: 36px
+  margin-right: 11px
+  margin-left: 21px
 
 .message__text
-  padding: 20px 40px 20px 20px
-  color: #222428
   min-width: 250px
   max-width: 550px
+  margin-right: 30px
+  padding: 20px 40px 20px 20px
+  color: #222428
   font-family: "Roboto", sans-serif
   font-size: 15px
   line-height: 1.5
-  margin-right: 30px
 
 .message__content
   min-width: 400px
@@ -322,22 +322,22 @@
 .message__time
   position: absolute
   right: 3%
+  bottom: 0%
+  margin: 15px 0 15px 20px
   color: $text-color
   font-size: 12px
-  margin: 15px 0 15px 20px
-  bottom: 0%
 
 /*----scroll---
 
 .sidebar::-webkit-scrollbar, .message-field::-webkit-scrollbar
   width: 4px
+  border-radius: 2px
   background: #fdfeff
   mix-blend-mode: normal
-  border-radius: 2px
 
 .sidebar::-webkit-scrollbar-thumb, .message-field::-webkit-scrollbar-thumb
-  background-color: #edf2ff
   border-radius: 2px
+  background-color: #edf2ff
 
 /*------RESPONSIVE-----
 /* to be continued
