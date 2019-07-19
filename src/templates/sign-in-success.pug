@@ -9,10 +9,13 @@ html(lang='en')
         link(rel="stylesheet", href="./../styles/reset.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap")
     body.body3
-        header.header-sign-in
-            img(src="./assets/logo2.svg", alt="")
-            a(href="/profile-personal.html")
-                +cta('Back to', 'Sign in', 'profile-personal.html')
+        header.header1
+            figure.header1__logo
+                a(href='index.html')
+                    img(src='./assets/logo2.svg' alt='' srcset='')
+            .header1__question
+                p.header1__text Do not have an account?
+                a.header1__link(href='sign-up.html') Sigin Up
         main.mainMail
             .bg
                 img(src="./assets/MailCheck.svg", alt="")

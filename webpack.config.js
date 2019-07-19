@@ -66,6 +66,14 @@ module.exports = {
             template: './src/templates/sign-in.pug'
         }),
         new HtmlWebpackPlugin({
+            filename: 'sign-up.html',
+            template: './src/templates/sign-up.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sign-up-add-data.html',
+            template: './src/templates/sign-up-add-data.pug'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'sign-in-success.html',
             template: './src/templates/sign-in-success.pug'
         }),
