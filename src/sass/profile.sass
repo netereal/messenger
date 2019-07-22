@@ -1,251 +1,289 @@
 @import "color-palette"
 @import "mixins"
 
-main
+body
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
+
+.header1
+  display: flex
+  justify-content: space-between
+  margin-top: 28px
+  .header1__logo
+    display: flex
+    margin-left: 9.5%
+  .header1__question
+    display: flex
+    align-items: center
+    font-size: 16px
+    margin-right: 9.5%
+    font-weight: 300
+    letter-spacing: 0.28px
+    color: #222428
+    .header1__link
+      padding-left: 5px
+      color: #2A74DB
+      text-decoration: none
+
+@media screen and (max-width: 480px)
+  .header1
+    flex-direction: column
+    align-items: center
+
+@media screen and (max-width: 480px)
+  .header1 .header1__logo
+    margin-left: 0
+    margin-bottom: 20px
+
+@media screen and (max-width: 480px)
+  .header1 .header1__question
+    margin-right: 0
+
+.main__profile
   display: flex
   flex-direction: column
-  height: 400px
   width: 80%
-  padding: 40px 40px
-  background-color: #FFFFFF
-  border-radius: 4px
-  box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06)
-  margin-left: 50px
+  height: 400px
   margin-top: 25px
+  margin-left: 50px
+  padding: 40px 40px
+  border-radius: 4px
+  background-color: #fff
+  box-shadow: 0 0 30px rgba(153, 163, 174, 0.06)
 .selectmenu
-  width: 100%
-  height: 25px
   display: flex
   align-items: center
+  width: 100%
+  height: 25px
 
 .personal-information
   display: flex
-  justify-content: center
   align-items: center
+  justify-content: center
   width: 40%
   height: 50px
-  box-shadow: inset 0 -2px 0 0 #E9E9E9
-  @include font('Roboto', 16px)
   font-style: normal
+  @include font('Roboto', 16px)
   font-weight: bold
+  letter-spacing: 0.6px
   line-height: 19px
   text-decoration: none
-  letter-spacing: 0.6px
   text-transform: uppercase
+  box-shadow: inset 0 -2px 0 0 #e9e9e9
   a
-    color: #CCD0DC
+    color: #ccd0dc
     text-decoration: none
   &.active
-    box-shadow: inset 0 -2px 0 0 #2A74DB
+    box-shadow: inset 0 -2px 0 0 #2a74db
     a
-      color: #01134E
+      color: #01134e
       text-decoration: none
 
 .account-info
   display: flex
-  margin-top: 50px
   justify-content: flex-start
   width: 90%
   height: 70%
+  margin-top: 50px
   .account-infobox-left
-    height: 100%
-    width: 40%
     display: flex
     flex-direction: column
     justify-content: space-between
+    width: 40%
+    height: 100%
     .item
-      width: 100%
-      height: 30%
       display: flex
       flex-direction: column
       justify-content: space-around
+      width: 100%
+      height: 30%
       .title
         @include font('Roboto', 12px)
+        color: $titleText
         font-style: normal
         font-weight: bold
-        line-height: 14px
         letter-spacing: 1px
+        line-height: 14px
         text-transform: uppercase
-        color: $titleText
       .firstLast
         @include firstLastInput()
 
   .account-infobox-right
-    height: 100%
-    width: 40%
     display: flex
     flex-direction: column
     justify-content: space-between
+    width: 40%
+    height: 100%
     .item
-      width: 100%
-      height: 30%
       display: flex
       flex-direction: column
       justify-content: space-around
+      width: 100%
+      height: 30%
       .title
-        width: 100%
         display: flex
         justify-content: flex-start
+        width: 100%
         @include font('Roboto', 12px)
+        color: $titleText
         font-style: normal
         font-weight: bold
-        line-height: 14px
         letter-spacing: 1px
+        line-height: 14px
         text-transform: uppercase
-        color: $titleText
       .firstLast
         @include firstLastInput()
 
     .change-password
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      justify-content: flex-end
       width: 89%
       height: 50%
-      display: flex
-      justify-content: flex-end
-      align-items: flex-start
-      flex-direction: row
       .passwd-wrap
-        width: 50%
         display: flex
-        justify-content: space-between
         align-items: center
+        justify-content: space-between
+        width: 50%
         a
           @include font('Roboto', 12px)
+          color: #01134e
           font-style: normal
           font-weight: 500
-          line-height: 14px
           letter-spacing: 0.28px
-          text-transform: uppercase
+          line-height: 14px
           text-decoration: none
-          color: #01134E
+          text-transform: uppercase
 
 /*------------*/
 .personal-info
   display: flex
-  margin-top: 50px
   justify-content: space-between
   width: 90%
   height: 70%
+  margin-top: 50px
 
   .photo
     display: flex
     flex-direction: column
     width: 130px
     .profile-photo
-      height: 130px
       width: 130px
-      object-fit: cover
+      height: 130px
       border-radius: 50%
+      object-fit: cover
     .change
       display: flex
       justify-content: center
       margin-top: 10px
 
       img
-        height: 13px
         width: 13px
-        border-radius: 0px
+        height: 13px
+        border-radius: 0
 
       a
         margin-left: 3px
-        text-decoration: none
+        color: #35373b
         @include font('Roboto', 12px)
         font-style: normal
         font-weight: normal
-        line-height: 14px
         letter-spacing: 0.28px
-        color: #35373B
+        line-height: 14px
+        text-decoration: none
 
   .personal-infobox-left
-    height: 100%
-    width: 280px
     display: flex
     flex-direction: column
     justify-content: space-between
+    width: 280px
+    height: 100%
     .item
-      width: 100%
-      height: 30%
       display: flex
       flex-direction: column
       justify-content: flex-start
+      width: 100%
+      height: 30%
       .title
         @include font('Roboto', 12px)
+        color: $titleText
         font-style: normal
         font-weight: bold
-        line-height: 14px
         letter-spacing: 1px
+        line-height: 14px
         text-transform: uppercase
-        color: $titleText
       .firstLast
         margin-top: 4px
         @include firstLastInput()
       .title-choose
-        margin-top: 4px
         display: flex
-        justify-content: space-between
         align-items: center
+        justify-content: space-between
         width: 100%
         height: 40px
-        padding: 0px 13px
+        margin-top: 4px
+        padding: 0 13px
         border: 2px solid $inputColor
         border-radius: 4px
         background-color: $inputBackg
         @include font('Roboto', 14px)
+        color: $inputText
         font-style: normal
         font-weight: normal
-        line-height: 16px
         letter-spacing: 0.28px
-        color: $inputText
+        line-height: 16px
 
   .personal-infobox-right
-    height: 100%
-    width: 310px
     display: flex
     flex-direction: column
     justify-content: space-between
+    width: 310px
+    height: 100%
     .item
-      width: 100%
-      height: 30%
       display: flex
       flex-direction: column
       justify-content: flex-start
+      width: 100%
+      height: 30%
       .title
         @include font('Roboto', 12px)
+        color: $titleText
         font-style: normal
         font-weight: bold
-        line-height: 14px
         letter-spacing: 1px
+        line-height: 14px
         text-transform: uppercase
-        color: $titleText
       .firstLast
         margin-top: 4px
         @include firstLastInput()
       .title-choose
-        margin-top: 4px
         display: flex
         flex-direction: row
         justify-content: space-between
+        margin-top: 4px
         .country
           display: flex
-          justify-content: space-around
           align-items: center
+          justify-content: space-around
           width: 20%
           height: 40px
+          padding: 0 13px
           border: 2px solid $inputColor
           border-radius: 4px
           background-color: $inputBackg
-          padding: 0px 13px
-        input[type=text]
+        input[type="text"]
           display: flex
           align-items: center
           width: 180px
-          padding: 0px 13px
+          padding: 0 13px
           border: 2px solid $inputColor
           border-radius: 4px
           background-color: $inputBackg
           &::placeholder
             @include font('Roboto', 14px)
+            color: $inputText
             font-style: normal
             font-weight: normal
-            line-height: 16px
             letter-spacing: 0.28px
-            color: $inputText
+            line-height: 16px
