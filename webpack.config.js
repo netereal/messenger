@@ -51,6 +51,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
+            template: './src/templates/preview.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'chat.html',
             template: './src/templates/index.pug'
         }),
         new HtmlWebpackPlugin({

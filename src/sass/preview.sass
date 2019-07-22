@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+$font: 'Roboto', sans-serif
+$accent: #16f
+$text: #222
+html,
+body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  font-family: $font
+*,
+*:after,
+*:before
+  box-sizing: inherit
+@mixin centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+@mixin tran
+  transition: 0.3s ease
+
+@mixin media-max($size)
+  @media screen and (max-width: $size)
+    @content
+
+@mixin media-min($size)
+  @media screen and (min-width: $size)
+    @content
+
+.container__prewiew
+  max-width: 1100px
+  margin: 0 auto
+  &:before
+    content: ''
+    width: 100%
+    height: 0
+    display: table
+    clear: both
+.shadow_sm
+  box-shadow: 1px 1px 5px #aaa
+.shadow_md
+  box-shadow: 3px 3px 15px #aaa
+.shadow_lg
+  box-shadow: 6px 6px 30px #aaa
+.shadow_xl
+  box-shadow: 10px 10px 50px #aaa
+.h-reset
+  margin: 0
+  padding: 0
+.h-position-t
+  top: 0.5em
+.h-position-b
+  bottom: 0.5em
+.col
+  float: left
+  padding: 1em
+  +media-min(1200px)
+    width: calc(100% / 3)
+  +media-max(1200px)
+    width: calc(100% / 3)
+  +media-max(800px)
+    width: calc(100% / 2)
+  +media-max(590px)
+    width: calc(100%)
+.card-item
+  max-width: 100%
+  position: relative
+  z-index: 1
+  &__divider
+    width: 100%
+    height: 1px
+    background-color: #ddd
+  &__title
+    font-size: 1.7em
+    position: absolute
+    z-index: 2
+    background-color: rgba(255,255,255, 0.7)
+    padding: 0.3em 0.4em
+    width: 100%
+    color: $text
+  &__img-wrapper
+    position: relative
+    max-width: 100%
+    height: 200px
+    overflow: hidden
+  &__img
+    max-width: 100%
+    min-height: auto
+    +centered
+  &__text-item
+    padding: 0
+    margin: 0
+    color: $text
+    font-size: 0.9em
+  &__footer
+    padding: 0.5em
+  &__link
+    color: $accent
+    text-decoration: none
+    display: inline-block
+    padding: 0.5em 0.4em 0.5em
+    +tran
+    &:hover
+      color: $accent * 0.7
+      text-shadow: 1px 1px 1px #ddd
+

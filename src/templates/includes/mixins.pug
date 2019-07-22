@@ -44,3 +44,15 @@ mixin cta(question, action, link)
 
 mixin input(text)
     input(type="text" class="input_main2" placeholder= text)
+
+mixin preview(content)
+    .col
+        article.card-item.shadow_lg
+            div.card-item__img-wrapper
+                h3.card-item__title.h-reset.h-position-t= content.title
+                img.card-item__img(src=content.img)
+            div.card-item__content
+                p.card-item__text-item= content.article
+            div.card-item__footer
+                a.card-item__link(href=content.page)
+                    | View Page...
