@@ -78,6 +78,14 @@ module.exports = {
             template: './src/templates/sign-up-add-data.pug'
         }),
         new HtmlWebpackPlugin({
+            filename: 'reset-password.html',
+            template: './src/templates/reset-password.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'password-recovery.html',
+            template: './src/templates/password-recovery.pug'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'sign-in-success.html',
             template: './src/templates/sign-in-success.pug'
         }),
